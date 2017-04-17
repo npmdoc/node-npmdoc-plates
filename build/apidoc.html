@@ -1,0 +1,1745 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/flatiron/plates"
+
+    >plates (v0.4.11)</a>
+</h1>
+<h4>Unobtrusive templating for the flatiron framework</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates">module plates</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map">
+            function <span class="apidocSignatureSpan">plates.</span>Map
+            <span class="apidocSignatureSpan">(conf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.append">
+            function <span class="apidocSignatureSpan">plates.</span>Map.prototype.append
+            <span class="apidocSignatureSpan">(plates, data, map)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.as">
+            function <span class="apidocSignatureSpan">plates.</span>Map.prototype.as
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.class">
+            function <span class="apidocSignatureSpan">plates.</span>Map.prototype.class
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.has">
+            function <span class="apidocSignatureSpan">plates.</span>Map.prototype.has
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.insert">
+            function <span class="apidocSignatureSpan">plates.</span>Map.prototype.insert
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.is">
+            function <span class="apidocSignatureSpan">plates.</span>Map.prototype.is
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.remove">
+            function <span class="apidocSignatureSpan">plates.</span>Map.prototype.remove
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.replace">
+            function <span class="apidocSignatureSpan">plates.</span>Map.prototype.replace
+            <span class="apidocSignatureSpan">(val1, val2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.tag">
+            function <span class="apidocSignatureSpan">plates.</span>Map.prototype.tag
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.use">
+            function <span class="apidocSignatureSpan">plates.</span>Map.prototype.use
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.where">
+            function <span class="apidocSignatureSpan">plates.</span>Map.prototype.where
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.bind">
+            function <span class="apidocSignatureSpan">plates.</span>bind
+            <span class="apidocSignatureSpan">(html, data, map)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.bind.bind">
+            function <span class="apidocSignatureSpan">plates.</span>bind.bind
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">plates.</span>Map.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">plates.</span>cache</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map">module plates.Map</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.Map">
+            function <span class="apidocSignatureSpan">plates.</span>Map
+            <span class="apidocSignatureSpan">(conf)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype">module plates.Map.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.append">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>append
+            <span class="apidocSignatureSpan">(plates, data, map)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.as">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>as
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.class">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>class
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.className">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>className
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.has">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>has
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.insert">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>insert
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.is">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>is
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.partial">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>partial
+            <span class="apidocSignatureSpan">(plates, data, map)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.remove">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>remove
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.replace">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>replace
+            <span class="apidocSignatureSpan">(val1, val2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.tag">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>tag
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.to">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>to
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.use">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>use
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.where">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>where
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype.append">module plates.Map.prototype.append</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.append.append">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>append
+            <span class="apidocSignatureSpan">(plates, data, map)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype.as">module plates.Map.prototype.as</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.as.as">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>as
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype.class">module plates.Map.prototype.class</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.class.class">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>class
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype.has">module plates.Map.prototype.has</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.has.has">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>has
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype.insert">module plates.Map.prototype.insert</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.insert.insert">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>insert
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype.is">module plates.Map.prototype.is</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.is.is">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>is
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype.remove">module plates.Map.prototype.remove</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.remove.remove">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>remove
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype.replace">module plates.Map.prototype.replace</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.replace.replace">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>replace
+            <span class="apidocSignatureSpan">(val1, val2)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype.tag">module plates.Map.prototype.tag</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.tag.tag">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>tag
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype.use">module plates.Map.prototype.use</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.use.use">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>use
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.Map.prototype.where">module plates.Map.prototype.where</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.Map.prototype.where.where">
+            function <span class="apidocSignatureSpan">plates.Map.prototype.</span>where
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.bind">module plates.bind</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.bind.bind">
+            function <span class="apidocSignatureSpan">plates.</span>bind
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plates.bind.bind">module plates.bind.bind</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plates.bind.bind.bind">
+            function <span class="apidocSignatureSpan">plates.bind.</span>bind
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates" id="apidoc.module.plates">module plates</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map" id="apidoc.element.plates.Map">
+        function <span class="apidocSignatureSpan">plates.</span>Map
+        <span class="apidocSignatureSpan">(conf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Mapper(conf) {
+  if (!(this instanceof Mapper)) { return new Mapper(conf); }
+
+  this.mappings = [];
+  this.conf = conf || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+A common use case is to apply the new value to each tag&#x27;s body based on the
+`class` attribute.
+
+```js
+var html = &#x27;&#x3c;span class=&#x22;name&#x22;&#x3e;User&#x3c;/span&#x3e;...&#x3c;span class=&#x22;name&#x22;&#x3e;User&#x3c
+;/span&#x3e;&#x27;;
+
+var data = { &#x22;username&#x22;: &#x22;John Smith&#x22; };
+var map = Plates.<span class="apidocCodeKeywordSpan">Map</span>();
+
+map.class(&#x27;name&#x27;).to(&#x27;username&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+## Complex instructions
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.append" id="apidoc.element.plates.Map.prototype.append">
+        function <span class="apidocSignatureSpan">plates.</span>Map.prototype.append
+        <span class="apidocSignatureSpan">(plates, data, map)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function append(plates, data, map) {
+  var l = last.call(this);
+
+  if (data instanceof Mapper) {
+    map = data;
+    data = undefined;
+  }
+
+  // If the supplied plates template doesn&#x27;t contain any HTML it&#x27;s most
+  // likely that we need to import it. To improve performance we will cache
+  // the result of the file system.
+  if (!/&#x3c;[^&#x3c;]+?&#x3e;/.test(plates) &#x26;&#x26; !exports.cache[plates]) {
+    // figure out if we are running in Node.js or a browser
+    if (&#x27;document&#x27; in env &#x26;&#x26; &#x27;getElementById&#x27; in env.document) {
+      exports.cache[plates] = document.getElementById(plates).innerHTML;
+    } else {
+      exports.cache[plates] = require(&#x27;fs&#x27;).readFileSync(
+        require(&#x27;path&#x27;).join(process.cwd(), plates),
+        &#x27;utf8&#x27;
+      );
+    }
+  }
+
+  l.plates = exports.cache[plates] || plates;
+  l.data = data;
+  l.mapper = map;
+
+  return last.call(this, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.as" id="apidoc.element.plates.Map.prototype.as">
+        function <span class="apidocSignatureSpan">plates.</span>Map.prototype.as
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function as(val) {
+  last.call(this).replace = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.class" id="apidoc.element.plates.Map.prototype.class">
+        function <span class="apidocSignatureSpan">plates.</span>Map.prototype.class
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function className(val) {
+  return this.where(&#x27;class&#x27;).is(val);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.has" id="apidoc.element.plates.Map.prototype.has">
+        function <span class="apidocSignatureSpan">plates.</span>Map.prototype.has
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function has(val) {
+  last.call(this).value = val;
+  this.replace(val);
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.insert" id="apidoc.element.plates.Map.prototype.insert">
+        function <span class="apidocSignatureSpan">plates.</span>Map.prototype.insert
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function insert(val) {
+  var l = last.call(this);
+  l.replace = l.attribute;
+  l.dataKey = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.is" id="apidoc.element.plates.Map.prototype.is">
+        function <span class="apidocSignatureSpan">plates.</span>Map.prototype.is
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function is(val) {
+  last.call(this).value = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.remove" id="apidoc.element.plates.Map.prototype.remove">
+        function <span class="apidocSignatureSpan">plates.</span>Map.prototype.remove
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function remove() {
+  last.call(this).remove = true;
+  return last.call(this, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.replace" id="apidoc.element.plates.Map.prototype.replace">
+        function <span class="apidocSignatureSpan">plates.</span>Map.prototype.replace
+        <span class="apidocSignatureSpan">(val1, val2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replace(val1, val2) {
+  var l = last.call(this);
+  l.replacePartial1 = val1;
+  l.replacePartial2 = val2;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.tag" id="apidoc.element.plates.Map.prototype.tag">
+        function <span class="apidocSignatureSpan">plates.</span>Map.prototype.tag
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tag(val) {
+  last.call(this, true).tag = val;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.use" id="apidoc.element.plates.Map.prototype.use">
+        function <span class="apidocSignatureSpan">plates.</span>Map.prototype.use
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function use(val) {
+  last.call(this).dataKey = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.where" id="apidoc.element.plates.Map.prototype.where">
+        function <span class="apidocSignatureSpan">plates.</span>Map.prototype.where
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function where(val) {
+  last.call(this, true).attribute = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.bind" id="apidoc.element.plates.bind">
+        function <span class="apidocSignatureSpan">plates.</span>bind
+        <span class="apidocSignatureSpan">(html, data, map)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function bind(html, data, map) {
+  var merge = new Merge();
+  return merge.bind(html, data, map);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var Plates = require(&#x27;plates&#x27;);
+
+var html = &#x27;&#x3c;div id=&#x22;test&#x22;&#x3e;Old Value&#x3c;/div&#x3e;&#x27;;
+var data = { &#x22;test&#x22;: &#x22;New Value&#x22; };
+
+var output = Plates.<span class="apidocCodeKeywordSpan">bind</span>(html, data);
+```
+
+## Explicit instructions
+A common use case is to apply the new value to each tag&#x27;s body based on the
+`class` attribute.
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.bind.bind" id="apidoc.element.plates.bind.bind">
+        function <span class="apidocSignatureSpan">plates.</span>bind.bind
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function bind() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map" id="apidoc.module.plates.Map">module plates.Map</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.Map" id="apidoc.element.plates.Map.Map">
+        function <span class="apidocSignatureSpan">plates.</span>Map
+        <span class="apidocSignatureSpan">(conf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Mapper(conf) {
+  if (!(this instanceof Mapper)) { return new Mapper(conf); }
+
+  this.mappings = [];
+  this.conf = conf || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+A common use case is to apply the new value to each tag&#x27;s body based on the
+`class` attribute.
+
+```js
+var html = &#x27;&#x3c;span class=&#x22;name&#x22;&#x3e;User&#x3c;/span&#x3e;...&#x3c;span class=&#x22;name&#x22;&#x3e;User&#x3c
+;/span&#x3e;&#x27;;
+
+var data = { &#x22;username&#x22;: &#x22;John Smith&#x22; };
+var map = Plates.<span class="apidocCodeKeywordSpan">Map</span>();
+
+map.class(&#x27;name&#x27;).to(&#x27;username&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+## Complex instructions
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype" id="apidoc.module.plates.Map.prototype">module plates.Map.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.append" id="apidoc.element.plates.Map.prototype.append">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>append
+        <span class="apidocSignatureSpan">(plates, data, map)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function append(plates, data, map) {
+  var l = last.call(this);
+
+  if (data instanceof Mapper) {
+    map = data;
+    data = undefined;
+  }
+
+  // If the supplied plates template doesn&#x27;t contain any HTML it&#x27;s most
+  // likely that we need to import it. To improve performance we will cache
+  // the result of the file system.
+  if (!/&#x3c;[^&#x3c;]+?&#x3e;/.test(plates) &#x26;&#x26; !exports.cache[plates]) {
+    // figure out if we are running in Node.js or a browser
+    if (&#x27;document&#x27; in env &#x26;&#x26; &#x27;getElementById&#x27; in env.document) {
+      exports.cache[plates] = document.getElementById(plates).innerHTML;
+    } else {
+      exports.cache[plates] = require(&#x27;fs&#x27;).readFileSync(
+        require(&#x27;path&#x27;).join(process.cwd(), plates),
+        &#x27;utf8&#x27;
+      );
+    }
+  }
+
+  l.plates = exports.cache[plates] || plates;
+  l.data = data;
+  l.mapper = map;
+
+  return last.call(this, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var partial = &#x27;&#x3c;li class=&#x22;partial&#x22;&#x3e;&#x3c;/li&#x3e;&#x27;;
+var base = &#x27;&#x3c;div&#x3e;&#x3c;h1 class=&#x22;foo&#x22;&#x3e;&#x3c;/h1&#x3e;&#x3c;ul class=&#x22;menu&#x22;&#x3e;&#x3c;/ul
+&#x3e;&#x3c;/div&#x3e;&#x27;;
+
+var baseData = { foo: &#x27;bar&#x27; };
+var mapping = Plates.Map();
+
+mapping.class(&#x27;menu&#x27;).<span class="apidocCodeKeywordSpan">append</span>(partial);
+console.log(Plates.bind(base, baseData, mapping));
+```
+
+# API
+
+## Plates Static Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.as" id="apidoc.element.plates.Map.prototype.as">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>as
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function as(val) {
+  last.call(this).replace = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;img data-foo=&#x22;bar&#x22; src=&#x22;&#x22;&#x3e;&#x3c;/img&#x3e;&#x27;;
+
+var data = { &#x22;imageurl&#x22;: &#x22;http://www.nodejitsu.com&#x22; };
+var map = Plates.Map();
+
+map.where(&#x27;data-foo&#x27;).is(&#x27;bar&#x27;).use(&#x27;imageurl&#x27;).<span class="apidocCodeKeywordSpan">as</span>(&#x27
+;src&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+## Collections
+
+Plates can also iterate through collections:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.class" id="apidoc.element.plates.Map.prototype.class">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>class
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function className(val) {
+  return this.where(&#x27;class&#x27;).is(val);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;span class=&#x22;name&#x22;&#x3e;User&#x3c;/span&#x3e;...&#x3c;span class=&#x22;name&#x22;&#x3e;User&#x3c
+;/span&#x3e;&#x27;;
+
+var data = { &#x22;username&#x22;: &#x22;John Smith&#x22; };
+var map = Plates.Map();
+
+map.<span class="apidocCodeKeywordSpan">class</span>(&#x27;name&#x27;).to(&#x27;username&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+## Complex instructions
+Another common case is to replace the value of an attribute if it is a match.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.className" id="apidoc.element.plates.Map.prototype.className">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>className
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function className(val) {
+  return this.where(&#x27;class&#x27;).is(val);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.has" id="apidoc.element.plates.Map.prototype.has">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>has
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function has(val) {
+  last.call(this).value = val;
+  this.replace(val);
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;a href=&#x22;/foo/bar&#x22;&#x3e;&#x3c;/a&#x3e;&#x27;;
+
+var data = { &#x22;newurl&#x22;: &#x22;bazz&#x22; };
+var map = Plates.Map();
+
+map.where(&#x27;href&#x27;).<span class="apidocCodeKeywordSpan">has</span>(/bar/).insert(&#x27;newurl&#x27;); // `has` can take
+a regular expression.
+
+console.log(Plates.bind(html, data, map));
+```
+
+In even more complex cases, an arbitrary attribute can be specified. If a value
+is matched, a specific value can be used and then used as another attribute&#x27;s
+value.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.insert" id="apidoc.element.plates.Map.prototype.insert">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>insert
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function insert(val) {
+  var l = last.call(this);
+  l.replace = l.attribute;
+  l.dataKey = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;a href=&#x22;/&#x22;&#x3e;&#x3c;/a&#x3e;&#x27;;
+
+var data = { &#x22;newurl&#x22;: &#x22;http://www.nodejitsu.com&#x22; };
+var map = Plates.Map();
+
+map.where(&#x27;href&#x27;).is(&#x27;/&#x27;).<span class="apidocCodeKeywordSpan">insert</span>(&#x27;newurl&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+Partial value replacement
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.is" id="apidoc.element.plates.Map.prototype.is">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>is
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function is(val) {
+  last.call(this).value = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;a href=&#x22;/&#x22;&#x3e;&#x3c;/a&#x3e;&#x27;;
+
+var data = { &#x22;newurl&#x22;: &#x22;http://www.nodejitsu.com&#x22; };
+var map = Plates.Map();
+
+map.where(&#x27;href&#x27;).<span class="apidocCodeKeywordSpan">is</span>(&#x27;/&#x27;).insert(&#x27;newurl&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+Partial value replacement
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.partial" id="apidoc.element.plates.Map.prototype.partial">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>partial
+        <span class="apidocSignatureSpan">(plates, data, map)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function append(plates, data, map) {
+  var l = last.call(this);
+
+  if (data instanceof Mapper) {
+    map = data;
+    data = undefined;
+  }
+
+  // If the supplied plates template doesn&#x27;t contain any HTML it&#x27;s most
+  // likely that we need to import it. To improve performance we will cache
+  // the result of the file system.
+  if (!/&#x3c;[^&#x3c;]+?&#x3e;/.test(plates) &#x26;&#x26; !exports.cache[plates]) {
+    // figure out if we are running in Node.js or a browser
+    if (&#x27;document&#x27; in env &#x26;&#x26; &#x27;getElementById&#x27; in env.document) {
+      exports.cache[plates] = document.getElementById(plates).innerHTML;
+    } else {
+      exports.cache[plates] = require(&#x27;fs&#x27;).readFileSync(
+        require(&#x27;path&#x27;).join(process.cwd(), plates),
+        &#x27;utf8&#x27;
+      );
+    }
+  }
+
+  l.plates = exports.cache[plates] || plates;
+  l.data = data;
+  l.mapper = map;
+
+  return last.call(this, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.remove" id="apidoc.element.plates.Map.prototype.remove">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>remove
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function remove() {
+  last.call(this).remove = true;
+  return last.call(this, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.replace" id="apidoc.element.plates.Map.prototype.replace">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>replace
+        <span class="apidocSignatureSpan">(val1, val2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replace(val1, val2) {
+  var l = last.call(this);
+  l.replacePartial1 = val1;
+  l.replacePartial2 = val2;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.tag" id="apidoc.element.plates.Map.prototype.tag">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>tag
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tag(val) {
+  last.call(this, true).tag = val;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.to" id="apidoc.element.plates.Map.prototype.to">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>to
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function use(val) {
+  last.call(this).dataKey = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;span class=&#x22;name&#x22;&#x3e;User&#x3c;/span&#x3e;...&#x3c;span class=&#x22;name&#x22;&#x3e;User&#x3c
+;/span&#x3e;&#x27;;
+
+var data = { &#x22;username&#x22;: &#x22;John Smith&#x22; };
+var map = Plates.Map();
+
+map.class(&#x27;name&#x27;).<span class="apidocCodeKeywordSpan">to</span>(&#x27;username&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+## Complex instructions
+Another common case is to replace the value of an attribute if it is a match.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.use" id="apidoc.element.plates.Map.prototype.use">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>use
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function use(val) {
+  last.call(this).dataKey = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;img data-foo=&#x22;bar&#x22; src=&#x22;&#x22;&#x3e;&#x3c;/img&#x3e;&#x27;;
+
+var data = { &#x22;imageurl&#x22;: &#x22;http://www.nodejitsu.com&#x22; };
+var map = Plates.Map();
+
+map.where(&#x27;data-foo&#x27;).is(&#x27;bar&#x27;).<span class="apidocCodeKeywordSpan">use</span>(&#x27;imageurl&#x27;).as(&#x27
+;src&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+## Collections
+
+Plates can also iterate through collections:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.where" id="apidoc.element.plates.Map.prototype.where">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>where
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function where(val) {
+  last.call(this, true).attribute = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;a href=&#x22;/&#x22;&#x3e;&#x3c;/a&#x3e;&#x27;;
+
+var data = { &#x22;newurl&#x22;: &#x22;http://www.nodejitsu.com&#x22; };
+var map = Plates.Map();
+
+map.<span class="apidocCodeKeywordSpan">where</span>(&#x27;href&#x27;).is(&#x27;/&#x27;).insert(&#x27;newurl&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+Partial value replacement
+
+```js
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype.append" id="apidoc.module.plates.Map.prototype.append">module plates.Map.prototype.append</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.append.append" id="apidoc.element.plates.Map.prototype.append.append">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>append
+        <span class="apidocSignatureSpan">(plates, data, map)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function append(plates, data, map) {
+  var l = last.call(this);
+
+  if (data instanceof Mapper) {
+    map = data;
+    data = undefined;
+  }
+
+  // If the supplied plates template doesn&#x27;t contain any HTML it&#x27;s most
+  // likely that we need to import it. To improve performance we will cache
+  // the result of the file system.
+  if (!/&#x3c;[^&#x3c;]+?&#x3e;/.test(plates) &#x26;&#x26; !exports.cache[plates]) {
+    // figure out if we are running in Node.js or a browser
+    if (&#x27;document&#x27; in env &#x26;&#x26; &#x27;getElementById&#x27; in env.document) {
+      exports.cache[plates] = document.getElementById(plates).innerHTML;
+    } else {
+      exports.cache[plates] = require(&#x27;fs&#x27;).readFileSync(
+        require(&#x27;path&#x27;).join(process.cwd(), plates),
+        &#x27;utf8&#x27;
+      );
+    }
+  }
+
+  l.plates = exports.cache[plates] || plates;
+  l.data = data;
+  l.mapper = map;
+
+  return last.call(this, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var partial = &#x27;&#x3c;li class=&#x22;partial&#x22;&#x3e;&#x3c;/li&#x3e;&#x27;;
+var base = &#x27;&#x3c;div&#x3e;&#x3c;h1 class=&#x22;foo&#x22;&#x3e;&#x3c;/h1&#x3e;&#x3c;ul class=&#x22;menu&#x22;&#x3e;&#x3c;/ul
+&#x3e;&#x3c;/div&#x3e;&#x27;;
+
+var baseData = { foo: &#x27;bar&#x27; };
+var mapping = Plates.Map();
+
+mapping.class(&#x27;menu&#x27;).<span class="apidocCodeKeywordSpan">append</span>(partial);
+console.log(Plates.bind(base, baseData, mapping));
+```
+
+# API
+
+## Plates Static Methods
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype.as" id="apidoc.module.plates.Map.prototype.as">module plates.Map.prototype.as</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.as.as" id="apidoc.element.plates.Map.prototype.as.as">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>as
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function as(val) {
+  last.call(this).replace = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;img data-foo=&#x22;bar&#x22; src=&#x22;&#x22;&#x3e;&#x3c;/img&#x3e;&#x27;;
+
+var data = { &#x22;imageurl&#x22;: &#x22;http://www.nodejitsu.com&#x22; };
+var map = Plates.Map();
+
+map.where(&#x27;data-foo&#x27;).is(&#x27;bar&#x27;).use(&#x27;imageurl&#x27;).<span class="apidocCodeKeywordSpan">as</span>(&#x27
+;src&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+## Collections
+
+Plates can also iterate through collections:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype.class" id="apidoc.module.plates.Map.prototype.class">module plates.Map.prototype.class</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.class.class" id="apidoc.element.plates.Map.prototype.class.class">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>class
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function className(val) {
+  return this.where(&#x27;class&#x27;).is(val);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;span class=&#x22;name&#x22;&#x3e;User&#x3c;/span&#x3e;...&#x3c;span class=&#x22;name&#x22;&#x3e;User&#x3c
+;/span&#x3e;&#x27;;
+
+var data = { &#x22;username&#x22;: &#x22;John Smith&#x22; };
+var map = Plates.Map();
+
+map.<span class="apidocCodeKeywordSpan">class</span>(&#x27;name&#x27;).to(&#x27;username&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+## Complex instructions
+Another common case is to replace the value of an attribute if it is a match.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype.has" id="apidoc.module.plates.Map.prototype.has">module plates.Map.prototype.has</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.has.has" id="apidoc.element.plates.Map.prototype.has.has">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>has
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function has(val) {
+  last.call(this).value = val;
+  this.replace(val);
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;a href=&#x22;/foo/bar&#x22;&#x3e;&#x3c;/a&#x3e;&#x27;;
+
+var data = { &#x22;newurl&#x22;: &#x22;bazz&#x22; };
+var map = Plates.Map();
+
+map.where(&#x27;href&#x27;).<span class="apidocCodeKeywordSpan">has</span>(/bar/).insert(&#x27;newurl&#x27;); // `has` can take
+a regular expression.
+
+console.log(Plates.bind(html, data, map));
+```
+
+In even more complex cases, an arbitrary attribute can be specified. If a value
+is matched, a specific value can be used and then used as another attribute&#x27;s
+value.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype.insert" id="apidoc.module.plates.Map.prototype.insert">module plates.Map.prototype.insert</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.insert.insert" id="apidoc.element.plates.Map.prototype.insert.insert">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>insert
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function insert(val) {
+  var l = last.call(this);
+  l.replace = l.attribute;
+  l.dataKey = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;a href=&#x22;/&#x22;&#x3e;&#x3c;/a&#x3e;&#x27;;
+
+var data = { &#x22;newurl&#x22;: &#x22;http://www.nodejitsu.com&#x22; };
+var map = Plates.Map();
+
+map.where(&#x27;href&#x27;).is(&#x27;/&#x27;).<span class="apidocCodeKeywordSpan">insert</span>(&#x27;newurl&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+Partial value replacement
+
+```js
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype.is" id="apidoc.module.plates.Map.prototype.is">module plates.Map.prototype.is</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.is.is" id="apidoc.element.plates.Map.prototype.is.is">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>is
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function is(val) {
+  last.call(this).value = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;a href=&#x22;/&#x22;&#x3e;&#x3c;/a&#x3e;&#x27;;
+
+var data = { &#x22;newurl&#x22;: &#x22;http://www.nodejitsu.com&#x22; };
+var map = Plates.Map();
+
+map.where(&#x27;href&#x27;).<span class="apidocCodeKeywordSpan">is</span>(&#x27;/&#x27;).insert(&#x27;newurl&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+Partial value replacement
+
+```js
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype.remove" id="apidoc.module.plates.Map.prototype.remove">module plates.Map.prototype.remove</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.remove.remove" id="apidoc.element.plates.Map.prototype.remove.remove">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>remove
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function remove() {
+  last.call(this).remove = true;
+  return last.call(this, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype.replace" id="apidoc.module.plates.Map.prototype.replace">module plates.Map.prototype.replace</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.replace.replace" id="apidoc.element.plates.Map.prototype.replace.replace">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>replace
+        <span class="apidocSignatureSpan">(val1, val2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replace(val1, val2) {
+  var l = last.call(this);
+  l.replacePartial1 = val1;
+  l.replacePartial2 = val2;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype.tag" id="apidoc.module.plates.Map.prototype.tag">module plates.Map.prototype.tag</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.tag.tag" id="apidoc.element.plates.Map.prototype.tag.tag">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>tag
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tag(val) {
+  last.call(this, true).tag = val;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype.use" id="apidoc.module.plates.Map.prototype.use">module plates.Map.prototype.use</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.use.use" id="apidoc.element.plates.Map.prototype.use.use">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>use
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function use(val) {
+  last.call(this).dataKey = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;img data-foo=&#x22;bar&#x22; src=&#x22;&#x22;&#x3e;&#x3c;/img&#x3e;&#x27;;
+
+var data = { &#x22;imageurl&#x22;: &#x22;http://www.nodejitsu.com&#x22; };
+var map = Plates.Map();
+
+map.where(&#x27;data-foo&#x27;).is(&#x27;bar&#x27;).<span class="apidocCodeKeywordSpan">use</span>(&#x27;imageurl&#x27;).as(&#x27
+;src&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+## Collections
+
+Plates can also iterate through collections:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.Map.prototype.where" id="apidoc.module.plates.Map.prototype.where">module plates.Map.prototype.where</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.Map.prototype.where.where" id="apidoc.element.plates.Map.prototype.where.where">
+        function <span class="apidocSignatureSpan">plates.Map.prototype.</span>where
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function where(val) {
+  last.call(this, true).attribute = val;
+  return last.call(this) &#x26;&#x26; this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var html = &#x27;&#x3c;a href=&#x22;/&#x22;&#x3e;&#x3c;/a&#x3e;&#x27;;
+
+var data = { &#x22;newurl&#x22;: &#x22;http://www.nodejitsu.com&#x22; };
+var map = Plates.Map();
+
+map.<span class="apidocCodeKeywordSpan">where</span>(&#x27;href&#x27;).is(&#x27;/&#x27;).insert(&#x27;newurl&#x27;);
+
+console.log(Plates.bind(html, data, map));
+```
+
+Partial value replacement
+
+```js
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.bind" id="apidoc.module.plates.bind">module plates.bind</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.bind.bind" id="apidoc.element.plates.bind.bind">
+        function <span class="apidocSignatureSpan">plates.</span>bind
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function bind() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var Plates = require(&#x27;plates&#x27;);
+
+var html = &#x27;&#x3c;div id=&#x22;test&#x22;&#x3e;Old Value&#x3c;/div&#x3e;&#x27;;
+var data = { &#x22;test&#x22;: &#x22;New Value&#x22; };
+
+var output = Plates.<span class="apidocCodeKeywordSpan">bind</span>(html, data);
+```
+
+## Explicit instructions
+A common use case is to apply the new value to each tag&#x27;s body based on the
+`class` attribute.
+
+```js
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plates.bind.bind" id="apidoc.module.plates.bind.bind">module plates.bind.bind</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plates.bind.bind.bind" id="apidoc.element.plates.bind.bind.bind">
+        function <span class="apidocSignatureSpan">plates.bind.</span>bind
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function bind() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var Plates = require(&#x27;plates&#x27;);
+
+var html = &#x27;&#x3c;div id=&#x22;test&#x22;&#x3e;Old Value&#x3c;/div&#x3e;&#x27;;
+var data = { &#x22;test&#x22;: &#x22;New Value&#x22; };
+
+var output = Plates.<span class="apidocCodeKeywordSpan">bind</span>(html, data);
+```
+
+## Explicit instructions
+A common use case is to apply the new value to each tag&#x27;s body based on the
+`class` attribute.
+
+```js
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
