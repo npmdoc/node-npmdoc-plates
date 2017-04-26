@@ -1,4 +1,7 @@
-# api documentation for  [plates (v0.4.11)](https://github.com/flatiron/plates)  [![npm package](https://img.shields.io/npm/v/npmdoc-plates.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-plates) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-plates.svg)](https://travis-ci.org/npmdoc/node-npmdoc-plates)
+# npmdoc-plates
+
+#### basic api documentation for  [plates (v0.4.11)](https://github.com/flatiron/plates)  [![npm package](https://img.shields.io/npm/v/npmdoc-plates.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-plates) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-plates.svg)](https://travis-ci.org/npmdoc/node-npmdoc-plates)
+
 #### Unobtrusive templating for the flatiron framework
 
 [![NPM](https://nodei.co/npm/plates.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/plates)
@@ -76,7 +79,8 @@
     "scripts": {
         "test": "vows --spec test/api-test.js"
     },
-    "version": "0.4.11"
+    "version": "0.4.11",
+    "bin": {}
 }
 ```
 
